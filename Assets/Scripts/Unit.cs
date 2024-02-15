@@ -26,9 +26,13 @@ public abstract class Unit : MonoBehaviour,
 
     private void Start()
     {
-
+        //asignamos el color que se selecciono desde el menu
+        if(MainManager.Instance != null){
+            SetColor(MainManager.Instance.TeamColor);
+        }
     }
 
+    //para asignarle un color a los montacargas
     void SetColor(Color c)
     {
         var colorHandler = GetComponentInChildren<ColorHandler>();
