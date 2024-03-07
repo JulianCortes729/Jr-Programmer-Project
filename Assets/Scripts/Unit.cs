@@ -55,6 +55,9 @@ public abstract class Unit : MonoBehaviour,
         }
     }
 
+    /*El primer método GoTo toma una clase Building como parámetro, la cual se recolecta cuando 
+    el usuario hace clic derecho sobre un conjunto de recursos o sobre la base. Después, 
+    este parámetro se transfiere al método SetTarget en el Script Unit. */
     public virtual void GoTo(Building target)
     {
         m_Target = target;
@@ -66,6 +69,8 @@ public abstract class Unit : MonoBehaviour,
         }
     }
 
+    /*El segundo método GoTo toma un parámetro Vector3 para situaciones en las 
+    que el usuario selecciona un punto aleatorio en la bodega en lugar de un conjunto de recursos. */
     public virtual void GoTo(Vector3 position)
     {
         //we don't have a target anymore if we order to go to a random point.
