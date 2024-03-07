@@ -7,7 +7,7 @@ using UnityEngine;
 public class MainManager : MonoBehaviour
 {
     //los valores almacenados en este miembro de clase se compartirán con todas las instancias de esa clase.
-    public static MainManager Instance;
+    public static MainManager Instance {get; private set;}
     public Color TeamColor;
 
     //Awake, al cual se llama tan pronto como se crea el objeto:
